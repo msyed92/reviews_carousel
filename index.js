@@ -49,11 +49,7 @@ document.querySelector(".prev-btn").addEventListener("click", function () {
 });
 
 document.querySelector(".next-btn").addEventListener("click", function () {
-  if (i >= 0 && i < employees.length - 1) {
-    i++;
-  } else {
-    i = 0;
-  }
+  i = (i+1) % employees.length
   setReview(i);
 });
 
